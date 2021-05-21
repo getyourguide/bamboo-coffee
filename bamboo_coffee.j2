@@ -1,0 +1,17 @@
+Dear {{ name }},
+
+Welcome to BambooCoffee - virtually connecting people across offices during the #wfh season.
+
+Your coffee break buddies are:
+{% for buddy in buddy_info %}
+    *) {{ buddy[0] }} ({{ buddy[2] }}, {{ buddy[1] }}, {{ buddy[3] }})
+{% endfor %}
+Your buddies' and your task is having a virtual coffee break (20-30 minutes) together this week. Take this unique opportunity to get to know your colleagues in different offices. Feel free to chat, talk, discuss, or even play games.
+{% if index == group[organiser_id] %}
+I decided randomly that you ({{ organiser }}) are accountable to organise this event. Just reply to this email to contact your buddies!
+{% else %}
+I decided randomly that {{ organiser }} is the accountable person to organise this event. However, feel free to take over. You just need to reply to this email to contact your buddies.
+{% endif %}
+
+Greetings,
+    Your BambooCoffee bot

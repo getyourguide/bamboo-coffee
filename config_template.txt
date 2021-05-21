@@ -1,0 +1,23 @@
+[DEFAULT]
+EMPLOYEES_CSV = employees.csv
+CSV_DELIMITER = ;
+
+[GROUPING]
+FEATURES = displayName,workEmail,department,location,jobTitle,firstName
+WHITELIST_LOCATIONS = berlin,zurich
+OPT_OUT_EMPLOYEES = employee1@example.com,employee2@example.com
+GROUP_SIZE = 4
+OPTIMIZED_FEATURE = department
+NUMBER_OF_TRIALS = 100000
+
+[BAMBOO]
+APIKEY = [REPLACE ME]
+SUBDOMAIN = [REPLACE ME]
+
+[SMTP]
+SENDER = BambooCoffee Bot <no-reply@example.com>
+SUBJECT = it's BambooCoffee time!
+HOST = [REPLACE ME]
+PORT = 587
+USER = [REPLACE ME]
+PASSWORD = [REPLACE ME]
