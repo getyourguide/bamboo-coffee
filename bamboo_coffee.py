@@ -181,7 +181,7 @@ def run(group_size, filterFunc, template_filename, diversity_feature, group_cons
 
     if send_emails or test_emails:
         with open(template_filename, 'r') as f:
-            body_template = jinja2.Template(f.read())
+            body_template = jinja2.Template(f.read(), autoescape=True)
             generate_and_send_emails(groups, filtered_df, body_template, test_recepient)
     else:
         debug_send_emails(groups, filtered_df)
